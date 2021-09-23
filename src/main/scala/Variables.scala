@@ -2,6 +2,8 @@ object Variables {
 
   def main(args: Array[String]): Unit = {
 
+//    val def = 65 should not use reserve keyword
+
     val rollNumber : Int = 34
     println(rollNumber)
     println("asas")
