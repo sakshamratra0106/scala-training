@@ -1,12 +1,17 @@
+import scala.annotation.tailrec
 import scala.io.StdIn
 
 object SakshamRatraAssignment1Question2 {
 
   def sum(xs: List[String]): Int = {
-    if(xs.isEmpty)
-      return 0
-    else
-      return xs.head.toInt + sum(xs.tail)
+    @tailrec
+    def inner(xs: List[String], accum: Int): Int = {
+      xs match {
+        case x :: tail => inner(tail, accum + x.toInt)
+        case Nil => accum
+      }
+    }
+    inner(xs, 0)
   }
 
   def main(args: Array[String]): Unit = {

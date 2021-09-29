@@ -73,7 +73,7 @@ object SakshamRatraAssignment1Question1 {
       i = i + 1
     }
 
-    //Printing Multiplication Matrix
+    //Printing Multiplication Matrix after multiplication
     for(arr <- multiplicatedOutputMatrix) {
       for (elem <- arr) {
         print(elem + " ")
